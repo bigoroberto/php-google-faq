@@ -12,7 +12,7 @@ $faqs = [
     
     Quando cerchi un nome, potresti trovare una notifica in cui viene spiegato che i risultati potrebbero essere stati modificati nel rispetto delle leggi europee per la protezione dei dati. Mostriamo questa notifica agli utenti europei quando cercano la maggior parte dei nomi, non soltanto le pagine che sono state soggette a una rimozione.<br><br><br><br>",
   ],
-/*   [
+  [
     'question' => "Come fa Google a proteggere la mia privacy e a tenere le mie informazioni al sicuro? <br><br>",
     'answer' => "Sappiamo che la sicurezza e la privacy sono importanti per te e lo sono anche per noi. Per noi è imperativo offrire un'elevata sicurezza e assicurarti che le tue informazioni sono al sicuro e accessibili quando ne hai bisogno.<br><br>
 
@@ -48,7 +48,7 @@ $faqs = [
   [
     'question' => "Quando faccio clic sui risultati della Ricerca Google, le mie chiavi di ricerca vengono inviate ai siti web?<br><br>",
     'answer' => "In alcuni casi sì. Quando fai clic su un risultato della Ricerca Google, il tuo browser web potrebbe reindirizzare alla pagina web di destinazione anche l'indirizzo Internet, o URL, della pagina dei risultati di ricerca sotto forma di URL referrer. Talvolta, l'URL della pagina dei risultati di ricerca potrebbe contenere la query di ricerca che hai inserito. Se utilizzi la ricerca SSL (la funzione di ricerca criptata di Google), nella maggior parte dei casi i termini di ricerca non vengono inviati come parte dell'URL negli URL referrer. Questo comportamento può fare eccezione, ad esempio se utilizzi alcuni browser meno diffusi. Ulteriori informazioni sulla ricerca SSL sono disponibili qui. Le query di ricerca o le informazioni contenute nell'URL referrer potrebbero essere disponibili mediante Google Analytics o un'API (Application Programming Interface). Inoltre, gli inserzionisti potrebbero ricevere informazioni relative all' esatte parole chiave che hanno determinato il clic su un annuncio.<br><br>",
-  ], */
+  ],
 ]
 ?>
 <!DOCTYPE html>
@@ -57,20 +57,48 @@ $faqs = [
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link  rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/1200px-Google_%22G%22_Logo.svg.png" type="image">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet"> 
   <link rel="stylesheet" href="style.css">
-  <title>Document</title>
+  <title>Domande frequenti - Privacy e termini - Google</title>
 </head>
 <body>
-  <header>
+  <header class="container">
     <div class="headerTop">
-      <h1>CIAO</h1>
+      <div class="logo">
+        <img src="https://blog.hubspot.com/hs-fs/hubfs/The%20Secret%20History%20of%20the%20Google%20Logo-1.jpeg?width=504&name=The%20Secret%20History%20of%20the%20Google%20Logo-1.jpeg" alt="Scritta GOOGLE">
+        <span>Privacy e Termini</span>
+      </div>
+      <div class="account">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_woqyfgvQ0HJ1inTc51DfdeOVmC7M0ekinCXqlh4Ck0kjJKEsu7oVMLR2hPJb8jANn1M&usqp=CAU" alt="immagine profilo">       
+      </div>
+    </div>
+    <div class="headerBottom">
+      <div class="list">
+        <ul>
+          <li><a href="#">Introduzione</a></li>
+          <li><a href="#">Norme sulla privacy</a></li>
+          <li><a href="#">Termini di servizio</a></li>
+          <li><a href="#">Tecnologie</a></li>
+          <li><a href="#">Domande Frequenti</a></li>
+        </ul>
+      </div>
     </div>
   </header>
   <main>
     <ul>
       <?php  foreach ($faqs as $faq) { ?>
-          <li><h2><?php echo $faq['question'] ?></h2> </li>
-          <li> <?php echo $faq['answer'] ?></li>
+          <li>
+            <h2>
+              <?php echo $faq['question'] ?>
+            </h2> 
+          </li>
+          <li>
+            <p>
+              <?php echo $faq['answer'] ?>
+            </p> 
+          </li>
       <?php } ?>  
     </ul>
   </main>
