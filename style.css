@@ -1,91 +1,102 @@
-/* GLOBALI */
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Roboto', sans-serif;
+  color: grey;
 }
-/* /GLOBALI */
 
-/* HEADER  TOP*/
+.clearfix:after{
+  content:'';
+  display: table;
+  overflow: hidden;
+  clear: both;
+}
+
 header{
-  width: 100%;
-  height: 100px;
-  z-index: 999;
   position: fixed;
+  width: 100%;
   top: 0;
+  left: 0;
   background-color: white;
   border-bottom: 1px solid lightgray;
 }
 
-.headerTop{
-  width: 100%;
-  height: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin: 0 20px;
+.container{
+  padding: 10px 20px;
+}
+.hader-top{
+  line-height: 50px;
+}
+.hader-top .left{
+  float:left;
 }
 
-.headerTop .logo img{
-  width: 100px;
-  
+.hader-top .right{
+  float:right;
 }
 
-.headerTop .account img{
-  width: 30px;
-  margin-right: 50px;
-  cursor: pointer;
-}
-/* /HEADER TOP*/
-/* HEADER  BOTTOM*/
-.headerBottom{
-  width: 100%;
-  height: 50px;
-  display: flex;
-  align-items: center;
+.hader-top .left img{
+  vertical-align: middle
 }
 
-.headerBottom .list ul{
+.hader-top .left span{
+  display: inline-block;
+  margin-left: 10px;
+  font-size: 1.30rem;
+  vertical-align: middle;
+}
+
+.hader-top .right img{
+  width: 40px;
+  border-radius: 50%;
+}
+
+.hader-bottom ul{
   list-style: none;
-  display: flex;
 }
 
-.headerBottom .list ul li a{
+.hader-bottom ul li{
+  float: left;
+  margin-right: 40px;
+}
+.hader-bottom ul li a{
   text-decoration: none;
-  padding: 0 20px;
-  color: #5f6368;
-  font-weight: 500;
+}
+.hader-bottom ul li a.active{
+  position: relative;
+  color: #3367D6;
+}
+.hader-bottom ul li a.active:after{
+  position: absolute;
+  content: '';
+  height: 3px;
+  width: 100%;
+  background-color: #3367D6;
+  left:0;
+  bottom:-10px;
 }
 
-.headerBottom .list ul li a:hover{
-  text-decoration: none;
-  padding: 0 20px;
-  color: #1068d3;
-  font-weight: 500;
-  border-bottom: 2px solid #1068d3;
-  bottom: 5px;
-}
-/* /HEADER  BOTTOM*/
-main{
-  width: 50%;
+.container-faq{
+  padding-top: 140px;
+  width: 1070px;
   margin: 0 auto;
-  margin-top: 200px;
 }
 
-main h2{
-  font-size: 24px;
-  color: #3e4043;
-  font-weight: 500;
+.container-faq .question{
+  font-size: 1.5rem;
+  color:#202020;
+  margin-bottom: 20px;
+  line-height: 35px;
 }
 
-main ul{
-  list-style: none;
+.container-faq .answer{
+  line-height: 25px;
+  font-size: 0.95rem;
+  margin-bottom: 20px;
 }
 
-main li{
-  list-style: none;
-}
-main li p{
-  font-size: 18px;
+footer{
+  height: 50px;
+  background-color: #F5F5F5;
 }
